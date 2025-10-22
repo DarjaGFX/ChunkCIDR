@@ -11,13 +11,13 @@ Build:
 
 Run:
 
-    ./chunkcidr -cidr 192.168.0.0/24 -prefix 26
+    chunkcidr -cidr 192.168.0.0/24 -prefix 26
 
 This prints the list of /26 subnets that cover the /24.
 
 You can also pass a CIDR via stdin (one per line). Example:
 
-    echo 199.66.248.0/29 | ./chunkcidr -prefix 30
+    echo 199.66.248.0/29 | chunkcidr -prefix 30
 
 This will print the /30 subnets that cover the /29.
 
@@ -36,5 +36,20 @@ Additional option:
 
 Examples:
 
-    ./chunkcidr -cidr 192.168.0.0/24 -prefix 26
-    echo 199.66.248.0/29 | ./chunkcidr -size 8
+    chunkcidr -cidr 192.168.0.0/24 -prefix 26
+    echo 199.66.248.0/29 | chunkcidr -size 8
+
+Installation
+------------
+
+Install locally (from the project root):
+
+```bash
+go install ./cmd/chunkcidr
+```
+
+Install from the published module (replace with the module path or use the one in this repo):
+
+```bash
+go install github.com/DarjaGFX/ChunkCIDR/cmd/chunkcidr@latest
+```
