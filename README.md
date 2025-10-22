@@ -42,14 +42,6 @@ Examples:
 Installation
 ------------
 
-Install locally (from the project root):
-
-```bash
-go install ./cmd/chunkcidr
-```
-
-Install from the published module (replace with the module path or use the one in this repo):
-
 ```bash
 go install github.com/DarjaGFX/ChunkCIDR/cmd/chunkcidr@latest
 ```
